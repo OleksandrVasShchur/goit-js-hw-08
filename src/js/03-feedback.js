@@ -36,7 +36,7 @@ const saveStateToLocalStorage = () => {
 const getAndChangeItems = () => {
     const savedState = localStorage.getItem('feedback-form-state');
     if (savedState) {
-        currentValue = JSON.parse(savedState);
+        const currentValue = JSON.parse(savedState);
         emailInputRef.value = currentValue.email;
         messageInputRef.value = currentValue.message;
     }
